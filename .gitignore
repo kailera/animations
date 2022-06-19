@@ -1,2 +1,5 @@
-#ignorar todas as pastas img
-img
+#imagens
+*.png
+*.jpg
+#pastas de imagens
+*img
