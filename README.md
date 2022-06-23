@@ -5,7 +5,7 @@
 * [KeyFrames](#keyframes)
 * [Animations](#animations)
 * [Positions](#positions)
-* [Transform](#transform)
+* [Transitions](#transitions)
 * [Before](#before) 
 
 
@@ -102,5 +102,19 @@ Ex:
 
 O filho seria posicionado a 50px do topo e da esquerda da tela e não em relação ao elemento pai.
 
-### Transform
+[Artigo incrível do Dev Luan Alves explicando o assunto](https://www.alura.com.br/artigos/entenda-a-propriedade-position-css)
+
+
+### Transitions
+Permite alterar os valores das propriedades do elemento, controlando o tempo e a forma das alterações
+
+Propriedades [w3schools](https://www.w3schools.com/css/css3_transitions.asp):
+transition	A shorthand property for setting the four transition properties into a single property
+transition-delay	Specifies a delay (in seconds) for the transition effect
+transition-duration	Specifies how many seconds or milliseconds a transition effect takes to complete
+transition-property	Specifies the name of the CSS property the transition effect is for
+transition-timing-function	Specifies the speed curve of the transition effect
+
+
 ### Before
+Before e After criam um pseudo-elemento antes e depois do elemento principal, respectivamente. É muito utilizado na estilização e melhora da UI. Na aula a professora utilizou o before para criar um efeito de abertura com margens, definindo o before com position:absolute, margin:#ffffff e opacity:0, para que quando fosse disparado o evento :hover, a margem expandisse e se formasse um efeito de abertura.
