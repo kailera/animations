@@ -47,5 +47,60 @@ animation-play-state: Permite a pausa de uma sequencia
 
 
 ### Positions
+Define a posição de um elemento na tela. 
+Static: Posicionado no canto superior esquerdo e segue o fluxo dos outros elementos. Não aceita as propriedades auxiliares (top | botton | left | right).
+Fixed: Faz com que o elemento não se mova na tela mesmo que uma página tenha rolamento (botão send to top, whatsapp). Aceita as propriedades auxiliares.
+Sticky: Literalmente colado, faz com que o elemento fique fixo em relação ao **rolamento da página**. É utilizado com as propriedades auxiliares pois precisa de um posicionamento de referência.
+Relative: Altera a posição de um elemento tendo como referência **sua posição inicial**. Assim, sua posição só se altera quando aplicadas as propriedades auxiliares.
+Absolute: Possui 2 comportamentos:
+
+1- O elemento possui um elemento pai com um position *diferente* de static: O elemento filho recebe as propriedades auxiliares e se posiçiona em relação ao **elemento pai** 
+Ex:
+```
+.pai{
+  width:100px;
+  height:100px;
+  background-color:red;
+  position: relative;
+  top:50px;
+  left:50px;
+}
+
+.filho{
+  width:50px;
+  height:50px;
+  background-color:blue;
+  position:absolute;
+  top:50px;
+  left:50px
+}
+
+```
+O elemento filho acumulará 100px do topo e 100px da esquerda da tela, pois está posicionado em relação ao pai.
+
+2- O elemento filho *não possui* um elemento pai com position diferente de static (confuso, mas vc pega ;) ): O elemento filho com position absolute se posiciona em relação á tela.
+Ex:
+```
+.pai{
+  width:100px;
+  height:100px;
+  background-color:red;
+  top:50px;
+  left:50px;
+}
+
+.filho{
+  width:50px;
+  height:50px;
+  background-color:blue;
+  position:absolute;
+  top:50px;
+  left:50px
+}
+
+```
+
+O filho seria posicionado a 50px do topo e da esquerda da tela e não em relação ao elemento pai.
+
 ### Transform
 ### Before
