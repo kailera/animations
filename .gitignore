@@ -1,5 +1,7 @@
 #imagens
-*.png
-*.jpg
 #pastas de imagens
-*img
+card\img
+chat\img
+final_project\img
+hamburger\img
+landing page\img
